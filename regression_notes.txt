@@ -1,0 +1,16 @@
+Although we often think of multiple regression as including multiple different features (e.g. # of bedrooms, square feet, and # of bathrooms) but we can also consider transformations of existing variables e.g. the log of the square feet or even "interaction" variables such as the product of bedrooms and bathrooms. Add 4 new variables in both your train_data and test_data.
+
+‘bedrooms_squared’ = ‘bedrooms’*‘bedrooms’
+‘bed_bath_rooms’ = ‘bedrooms’*‘bathrooms’
+‘log_sqft_living’ = log(‘sqft_living’)
+‘lat_plus_long’ = ‘lat’ + ‘long’
+Before we continue let’s explain these new variables:
+
+Squaring bedrooms will increase the separation between not many bedrooms (e.g. 1) and lots of bedrooms (e.g. 4) since 1^2 = 1 but 4^2 = 16. Consequently this variable will mostly affect houses with many bedrooms.
+Bedrooms times bathrooms is what's called an "interaction" variable. It is large when both of them are large.
+Taking the log of square feet has the effect of bringing large values closer together and spreading out small values.
+
+
+
+
+
